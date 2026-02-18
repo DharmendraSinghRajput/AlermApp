@@ -175,6 +175,7 @@ class AlarmReceiver : BroadcastReceiver() {
         )
 
     companion object {
+
         private const val TAG = "AlarmReceiver"
         private const val CHANNEL_ID = "alarm_channel"
         private const val NOTIFICATION_ID = 1001
