@@ -56,12 +56,12 @@ class MainActivity : AppCompatActivity() {
             // Insert alarm and schedule it
             lifecycleScope.launch {
                 val alarmId = viewModel.insertAlarmSuspend(alarm)
-                scheduleAlarm(alarmId.toInt(), triggerTime, alarm)
+                scheduleAlarm(alarmId.toInt(), triggerTime)
             }
         }
     }
 
-    private fun scheduleAlarm(alarmId: Int, triggerTime: Long, alarm: AlarmEntity) {
+    private fun scheduleAlarm(alarmId: Int, triggerTime: Long) {
         val intent = Intent(this, AlarmReceiver::class.java).apply {
             putExtra(AlarmReceiver.EXTRA_ALARM_ID, alarmId)
         }
