@@ -14,6 +14,4 @@ class AlarmRepository @Inject constructor(
     suspend fun getById(id: Int) =
         alarmDao.getAlarmById(id)
 
-    fun getAll() =
-        alarmDao.getAllAlarms()
 }
